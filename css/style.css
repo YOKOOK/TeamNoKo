@@ -1,0 +1,427 @@
+@charset "utf-8";
+/* Reset */
+
+
+body {
+  font-family: sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+article {
+  display:flex;
+  height: 100%;
+}
+.left_side {
+  background-color:transparent;
+  width:200px;
+  height:auto;
+}
+.right_side {
+  background-color:#a5f172;
+  width:100%;
+  height:auto;
+}
+#container {
+  background-color: transparent;
+  position: relative;
+  height: auto;
+  width: 900px;
+  margin: 0px auto 0px auto;
+  float: none;
+  z-index: 100;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+/* header
+--------------------------------------- */
+@media screen and (max-width:480px) {
+  header {
+    position: fixed;
+    background-color: blue;
+    height: 200px;
+    width: auto;
+    z-index: 40;
+  }
+}
+@media screen and (min-width:480px) {
+  header {
+    position: absolute;
+    background-color: blue;
+    height: 200px;
+    width: 900px;
+    z-index: 40;
+  }
+}
+
+span.prev-3 {
+  position: absolute;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  top: 3px;
+  left: 153px;
+}
+
+span.prev-2 {
+  position: absolute;
+  border-radius: 50%;
+  height: 95px;
+  width: 95px;
+  top: 40px;
+  left: 108px;
+}
+
+span.prev-1 {
+  position: absolute;
+  border-radius: 50%;
+  height: 113px;
+  width: 113px;
+  top: 72px;
+  left: 200px;
+}
+
+span.current {
+  position: absolute;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  top: 85px;
+  left: 390px;
+}
+
+span.next-1 {
+  position: absolute;
+  border-radius: 50%;
+  height: 113px;
+  width: 113px;
+  top: 72px;
+  left: 586px;
+}
+
+span.next-2 {
+  position: absolute;
+  border-radius: 50%;
+  height: 95px;
+  width: 95px;
+  top: 40px;
+  left: 698px;
+}
+
+span.next-3 {
+  position: absolute;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  top: 3px;
+  left: 673px;
+}
+
+#canvas {
+  z-index: 20;
+}
+
+main {
+  height: 1150px;
+  width: 900px;
+}
+
+/* carousel slider
+--------------------------------------- */
+.carousel {
+  /* ここの幅、高さを変える事でどのサイズにも対応させることが可能。imgのサイズ指定は不要。 */
+  width: 900px;
+  height: 100%;
+  margin-top: 200px;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  background-color: transparent;
+ }
+
+.carousel>ul {
+  width: calc(100% * 7);
+  display: flex;
+  padding-inline-start: 0px;
+}
+
+.carousel>ul>li {
+  width: calc(100% / 7);
+  background:transparent;
+}
+
+/* .carousel img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; */
+/* } */
+/* prev next button */
+/* .carousel > span{
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    font-size: 30px;
+    margin-top: -15px;
+    line-height: 1.0;
+}
+.carousel > span.prev-1{
+    left: 0;
+}
+.carousel > span.next-1{
+    right: 0;
+} */
+
+
+
+
+.carousel_side {
+  /* ここの幅、高さを変える事でどのサイズにも対応させることが可能。imgのサイズ指定は不要。 */
+  width: 100%;
+  height: auto;
+  margin-top: 200px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background-color: transparent;
+  
+}
+
+.carousel_side>ul {
+  width: calc(100% * 7);
+  display: flex;
+  padding-inline-start: 0px;
+}
+
+.carousel_side>ul>li {
+  width: calc(100% / 7);
+}
+
+a.btn-flat {
+  overflow: hidden;
+
+  padding: 1.5rem 6rem;
+
+  color: #fff;
+  border-radius: 0;
+  background: #232592;
+}
+
+a.btn-flat span {
+  position: relative;
+}
+
+a.btn-flat:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100px;
+  height: 100px;
+
+  content: '';
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-80%) translateY(-25px);
+  transform: translateX(-80%) translateY(-25px);
+
+  border-radius: 50%;
+  background: #eb6100;
+}
+
+a.btn-flat:hover:before {
+  width: 400px;
+  height: 400px;
+
+  -webkit-transform: translateX(-1%) translateY(-175px);
+
+  transform: translateX(-1%) translateY(-175px);
+}
+
+/*まずはお決まりのボックスサイズ算出をborer-boxに */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.btn,
+a.btn,
+button.btn {
+  width: 200px;
+  font-size: 1.0rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  border-radius: 0.5rem;
+}
+
+footer {
+  height: 20px;
+  width: auto;
+  background-color: white;
+}
+
+/* ここからオープニングアニメーションのCSS*/
+.bg {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  animation: bgAnime 1s linear 1.8s forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2999999;
+}
+
+.text {
+  text-align: center;
+  font-size: 6vw;
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  height: 1em;
+  line-height: 1.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 7;
+  opacity: 0;
+  animation: textAnime1 .5s linear forwards;
+}
+
+.text span {
+  display: inline-block;
+}
+
+.text span:nth-child(1) {
+  animation: textAnime2 .6s ease-in-out .5s forwards;
+}
+
+.text span:nth-child(2) {
+  animation: textAnime2 .6s ease-in-out .6s forwards;
+}
+
+.text span:nth-child(3) {
+  animation: textAnime2 .6s ease-in-out .7s forwards;
+}
+
+.text span:nth-child(4) {
+  animation: textAnime2 .6s ease-in-out .8s forwards;
+}
+
+/*keyframe*/
+@keyframes textAnime1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes textAnime2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-30%);
+  }
+
+  75% {
+    transform: translateY(30%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bgAnime {
+  0% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/*  ここまでオープニングアニメーションのCSS*/
+
+#particles-js{ 
+	position:fixed;/*描画固定*/
+	z-index:-1;/*描画を一番下に*/
+	width: 100%;
+	height: 100%;
+	background-color:white;/*背景色*/
+}
+
+#wrapper{
+	position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+	z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+	width:100%;
+	height: 100%;
+}
+.a{
+  height:100% ;
+}
+.b{
+  height:100% ;
+}
+.c{
+  height:100% ;
+}
+.d{
+  height:100% ;
+}
+.e{
+  height:100% ;
+}
+.f{
+  height:100% ;
+}
+.i{
+  height:100% ;
+}
