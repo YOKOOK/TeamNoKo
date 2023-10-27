@@ -147,7 +147,7 @@ main {
   position: absolute;
   overflow: hidden;
   text-align: center;
-  background-color: transparent;
+  background-color:white ;
  }
 
 .carousel>ul {
